@@ -5,4 +5,4 @@ Get popular movie list from TMDB API with MVVM and Data binding
 ```kotlin
 private val apiKey: String = "Your API Key" //Change with your API
 ```
-<img src="screenshot/movie.png" height="30%" width="30%">
+<img src="screenshots/movie.png" height="30%" width="30%">
