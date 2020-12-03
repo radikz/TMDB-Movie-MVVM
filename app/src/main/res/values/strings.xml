@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">tmdbMvvm</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="popular">Popular</string>
+    <string name="most_popular_movies">Most popular movies</string>
+    <string name="error_fetch_movies">Please check your internet connection</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="highest_rated_movies">Highest rated movies of all time</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="stay_updated">Stay updated with the latest movies</string>
+    <string name="movie_year">2018</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_rating">8.7</string>
+    <string name="pagination_movies">Page: </string>
+    <string name="image_poster">This is image poster</string>
+    <string name="rating_format">%.1f</string>
+</resources>
