@@ -14,4 +14,6 @@
     <string name="pagination_movies">Page: </string>
     <string name="image_poster">This is image poster</string>
     <string name="rating_format">%.1f</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

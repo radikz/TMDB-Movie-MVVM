@@ -1,24 +1,26 @@
 package id.radikz.tmdbmvvm
 
-import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import id.radikz.tmdbmvvm.model.Movie
 import id.radikz.tmdbmvvm.repository.MoviesRepository
 
 class FirstFragmentViewModel : ViewModel() {
-    var movies: MutableLiveData<List<Movie>> = MutableLiveData()
+
+    private var _movies = MutableLiveData<List<Movie>>()
+    val movies: LiveData<List<Movie>>
+            get() = _movies
 
     init {
-        Log.i("FirstFragmentViewModel", "FirstFragmentViewModel created")
         getPopularMovies()
     }
 
     private fun getPopularMovies(){
-        movies = MoviesRepository.getPopularMovies()
+        _movies = MoviesRepository.getPopularMovies()
     }
 
-    fun getMovie(): MutableLiveData<List<Movie>> {
+    fun getMovie(): LiveData<List<Movie>> {
         return movies
     }
 }

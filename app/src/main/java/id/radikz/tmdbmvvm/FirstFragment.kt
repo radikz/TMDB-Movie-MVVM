@@ -32,6 +32,8 @@ class FirstFragment : Fragment() {
             false
         )
 
+        binding.setLifecycleOwner(this)
+
         viewModel = ViewModelProvider(this).get(FirstFragmentViewModel::class.java)
 
         val progress = binding.progressMovies

@@ -10,5 +10,17 @@
         android:name="id.radikz.tmdbmvvm.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="id.radikz.tmdbmvvm.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movies"
+            app:argType="id.radikz.tmdbmvvm.model.Movie" />
     </fragment>
 </navigation>

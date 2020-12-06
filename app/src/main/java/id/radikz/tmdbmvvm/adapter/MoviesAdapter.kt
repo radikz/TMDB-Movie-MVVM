@@ -4,9 +4,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import id.radikz.tmdbmvvm.FirstFragment
+import id.radikz.tmdbmvvm.FirstFragmentDirections
 import id.radikz.tmdbmvvm.R
 import id.radikz.tmdbmvvm.databinding.ItemMovieBinding
 import id.radikz.tmdbmvvm.model.Movie
@@ -47,7 +50,17 @@ class MoviesAdapter(
                 .transform(CenterCrop())
                 .into(binding.itemMoviePoster)
 
-            itemView.setOnClickListener { Log.i("MoviesAdapter", "click") }
+            binding.root.setOnClickListener{
+                val direction = FirstFragmentDirections.actionFirstFragmentToDetailFragment(movie)
+                binding.root.findNavController().navigate(direction)
+                Log.i("MoviesAdapter", movie.title)
+            }
+
+            /*itemView.setOnClickListener {
+                val direction = FirstFragmentDirections.actionFirstFragmentToDetailFragment(movie)
+
+                Log.i("MoviesAdapter", "click")
+            }*/
         }
     }
 }

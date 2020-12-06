@@ -17,7 +17,7 @@ import java.security.NoSuchAlgorithmException
 
 object MoviesRepository {
     private val api: Api
-    private val apiKey: String = "YOUR API"
+    private val apiKey: String = "ef89e61c8a5eab5624af0b6b8802021e"
 
     init {
         var client = OkHttpClient()
