@@ -8,7 +8,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import id.radikz.tmdbmvvm.FirstFragment
 import id.radikz.tmdbmvvm.FirstFragmentDirections
 import id.radikz.tmdbmvvm.R
 import id.radikz.tmdbmvvm.databinding.ItemMovieBinding
@@ -55,12 +54,6 @@ class MoviesAdapter(
                 binding.root.findNavController().navigate(direction)
                 Log.i("MoviesAdapter", movie.title)
             }
-
-            /*itemView.setOnClickListener {
-                val direction = FirstFragmentDirections.actionFirstFragmentToDetailFragment(movie)
-
-                Log.i("MoviesAdapter", "click")
-            }*/
         }
     }
 }
